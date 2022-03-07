@@ -1,0 +1,14 @@
+.roomImage {
+  max-height: 100px;
+  max-width: auto;
+  cursor: pointer;
+}
+
+#patient-room {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  /* display: flex;
+  flex-wrap: wrap; */
+}
