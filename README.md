@@ -10,7 +10,9 @@
 
 ### **_Description_**
 
-#### A browser based, nursing simulation meant to simulate and evaluate the common, but important task of administing oral medications to a patient, in an inpatient setting. Based on the 5 Nursing Rights of Medication Administation, [NCBI]. Intended audience can include nurses, nursing students, educators, and healthcare administrators.
+#### A browser based, nursing simulation meant to evaluate the common, but important task of administing oral medications to a patient, in an inpatient setting. Based on the 5 Nursing Rights of Medication Administation, [NCBI], this is meant to be a training tool to help prevent medication errors. Intended audience can include nurses, nursing students, educators, and healthcare administrators.
+
+![Pills](https://www.nurse.com/blog/wp-content/uploads/2017/02/Nurse-patient-pills-FB.jpeg)
 
 ---
 
@@ -35,6 +37,8 @@
 #### - CSS involved would involve styling for all pages, with most complex grid/flex on the Patient Room page.
 
 #### - Mutiple elements to click/interact with, including a Patient, Chart/Computer, Medication, and MAR (Medication Admin Record). To reflect 5 Rights of Med Admin.
+
+![MedErrors](https://www.myamericannurse.com/wp-content/uploads/2010/03/prevent-medication-errors-257x300.jpg)
 
 #### - Gameplay centered around making choices when interacting with elements on the page. E.g. asking the patient for double identifiers; verying the correct medication, dose, route, time; and assessing for the right indication and result of the medication. Points/Pass allotted to the correct choices. Deductions for wrong choices. Same to assume wrong choices lead to automatic failure, as this simulation is meant to train on nursing standards of care.
 
