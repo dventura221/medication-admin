@@ -69,3 +69,9 @@
 #### Nursing Rights of Medicaion Administration [NCBI] (https://www.ncbi.nlm.nih.gov/books/NBK560654/)
 
 #### Images: [Imgur](imgur.com)
+
+#### Stacke Overflow (https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+
+#### W3 Schools (https://www.w3schools.com/html/html5_webstorage.asp)
+
+#### JavaScript Tutorial (https://www.javascripttutorial.net/web-apis/javascript-sessionstorage/)

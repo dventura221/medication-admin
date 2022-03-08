@@ -1,49 +1,45 @@
 //Global Variables
-let data = sessionStorage.setItem
+//let data = sessionStorage.getItem('Lis')
 const buttonLis = document.getElementById('buttonLis')
 const buttonAsp = document.getElementById('buttonAsp')
+const ptRoomCheck = document.getElementById('PagePatientRoom')
+const buttonMedReturn = document.getElementById('return-meds')
+const heldMeds = document.getElementById('All-Held-Meds')
 
 //Global Functions
 
-// function storageAvailable(type) {
-//   var storage
-//   try {
-//     storage = window[type]
-//     var x = '__storage_test__'
-//     storage.setItem(x, x)
-//     storage.removeItem(x)
-//     return true
-//   } catch (e) {
-//     return (
-//       e instanceof DOMException &&
-//       // everything except Firefox
-//       (e.code === 22 ||
-//         // Firefox
-//         e.code === 1014 ||
-//         // test name field too, because code might not be present
-//         // everything except Firefox
-//         e.name === 'QuotaExceededError' ||
-//         // Firefox
-//         e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-//       // acknowledge QuotaExceededError only if there's something already stored
-//       storage &&
-//       storage.length !== 0
-//     )
-//   }
-// }
-// if (storageAvailable('localStorage')) {
-//   console.log('Yippee! We can use localStorage awesomeness')
-// } else {
-//   console.log('Too bad, no localStorage for us')
-// }
+let storedMeds = Object.keys(sessionStorage)
+
+let medCarryOver = () => {
+  for (let key of storedMeds) {
+    //console.log(`${key}: ${sessionStorage.getItem(key)}`) -- string of 'key: value'
+    //console.log(sessionStorage.getItem(key)) -- string of value
+    const newButton = document.createElement('button')
+    newButton.innerText = sessionStorage.getItem(key)
+    heldMeds.appendChild(newButton)
+  }
+}
+
+if (ptRoomCheck !== null) {
+  console.log('Page IS Pt Room')
+  //Code to DOM add med elements to PtRoom to carry over from medRoom
+  medCarryOver()
+} else {
+  console.log('Page is NOT Pt Room')
+}
 
 //Event Listeners
+buttonMedReturn.addEventListener('click', () => {
+  sessionStorage.clear()
+  console.log(sessionStorage)
+})
+
 buttonLis.addEventListener('click', () => {
-  sessionStorage.setItem('Lis', 'yes')
+  sessionStorage.setItem('Lis', 'Lisinopril 5 mg tablet')
   console.log(sessionStorage)
 })
 
 buttonAsp.addEventListener('click', () => {
-  sessionStorage.setItem('Asp', 'yes')
+  sessionStorage.setItem('Asp', 'Aspirin 81 mg tablet')
   console.log(sessionStorage)
 })
