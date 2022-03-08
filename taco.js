@@ -5,6 +5,7 @@ const buttonAsp = document.getElementById('buttonAsp')
 const ptRoomCheck = document.getElementById('PagePatientRoom')
 const buttonMedReturn = document.getElementById('return-meds')
 const heldMeds = document.getElementById('All-Held-Meds')
+const ptRoomButtons = document.getElementsByClassName('ptRoom-button')
 
 //Global Functions
 
@@ -16,6 +17,7 @@ let medCarryOver = () => {
     //console.log(sessionStorage.getItem(key)) -- string of value
     const newButton = document.createElement('button')
     newButton.innerText = sessionStorage.getItem(key)
+    newButton.classList.add('ptRoom-button')
     heldMeds.appendChild(newButton)
   }
 }
@@ -31,6 +33,11 @@ if (ptRoomCheck !== null) {
 //Event Listeners
 buttonMedReturn.addEventListener('click', () => {
   sessionStorage.clear()
+  if (ptRoomCheck !== null) {
+    while (heldMeds.firstChild) {
+      heldMeds.removeChild(heldMeds.firstChild)
+    }
+  }
   console.log(sessionStorage)
 })
 
