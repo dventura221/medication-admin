@@ -12,11 +12,18 @@
   <h1>The Patient Room</h1>
   <button id="backToPage1" onclick="window.location.href='start.html'">Back to Start</button>
   <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
+  <button id="toFinalRoom" onclick="window.location.href='index3.html'">Finish</button>
+  <section id="Held-Meds">
+    <h3>Held Meds</h3>
+    <button id="return-meds" type="button">Return Meds</button>
+    <div id="All-Held-Meds">
+
+    </div>
   <section id="patient-room">
     <div id="thePatient">
       <h2>Patient X</h2>
       <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" >
-      <form>
+      <form action="index3.html" method="get">
         <fieldset>
           <legend>Choose the most correct way to interact during medication administration:</legend>
           <input type="radio" id="ignore" name="ptInt">
@@ -27,7 +34,7 @@
           <label for="doubID">Say hello, tell them you have their meds, and ask for their full name and date of birth</label><br/>
           <input type="radio" id="wrongPt" name="ptInt">
           <label for="wrongPt">Say hello and give the meds to a family member to give to the patient</label><br/>
-          
+          <input type="submit" value="Confirm">
         </fieldset>
       </form>
     </div>
@@ -53,12 +60,7 @@
     </div>
   </section>
 
-  <section id="Held-Meds">
-    <h3>Held Meds</h3>
-    <button id="return-meds" type="button">Return Meds</button>
-    <div id="All-Held-Meds">
 
-    </div>
 
   </section>
 
