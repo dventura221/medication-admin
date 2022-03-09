@@ -62,39 +62,39 @@ buttonMedReturn.addEventListener('click', () => {
 })
 
 buttonLis.addEventListener('click', () => {
-  sessionStorage.setItem('Lis', 'Lisinopril 5 mg tablet')
+  sessionStorage.setItem('Lis', ' Lisinopril 5 mg tablet')
   console.log(sessionStorage)
   //clearMedRmPulled()
   medsPulledList()
 })
 
 buttonAsp.addEventListener('click', () => {
-  sessionStorage.setItem('Asp', 'Aspirin 81 mg tablet')
+  sessionStorage.setItem('Asp', ' Aspirin 81 mg tablet')
   console.log(sessionStorage)
   //clearMedRmPulled()
   medsPulledList()
 })
 
 buttonEsci.addEventListener('click', () => {
-  sessionStorage.setItem('Esci', 'Escitalopram 10 mg tablet')
+  sessionStorage.setItem('Esci', ' Escitalopram 10 mg tablet')
   //console.log(sessionStorage)
   medsPulledList()
 })
 
 buttonTraz.addEventListener('click', () => {
-  sessionStorage.setItem('Traz', 'Trazodone 50 mg tablet')
+  sessionStorage.setItem('Traz', ' Trazodone 50 mg tablet')
   //console.log(sessionStorage)
   medsPulledList()
 })
 
 buttonOmep.addEventListener('click', () => {
-  sessionStorage.setItem('Omep', 'Omeprazole 20 mg capsule')
+  sessionStorage.setItem('Omep', ' Omeprazole 20 mg capsule')
   //console.log(sessionStorage)
   medsPulledList()
 })
 
 buttonGaba.addEventListener('click', () => {
-  sessionStorage.setItem('Gaba', 'Gabapentin 300 mg capsule')
+  sessionStorage.setItem('Gaba', ' Gabapentin 300 mg capsule')
   //console.log(sessionStorage)
   medsPulledList()
 })
