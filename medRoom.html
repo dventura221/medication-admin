@@ -14,20 +14,22 @@
   <button id="advanceToPtRoom" onclick="window.location.href='ptRoom.html'">Go to Patient Room</button>
   <section id="medOrders">
     <h2>Medication Orders</h2>
-    <ul>
-      <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at 0900. <span style="font-weight: bold">HOLD</span> if systolic BP < 100, or diastolic BP < 50, then notify provider. Indication: Hypertension</li>
-      <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at 0900. Indication: Depression</li>
-      <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at 2100. Indication: Insomnia</li>
-      <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at 0900. Indication: GERD</li>
-      <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at 0900, 1300, and 2100. 
-      Indication: Chronic Pain</li>
-    </ul>
+    <details>
+      <summary>Expand to check med orders</summary>
+      <ul>
+        <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100</li>
+        <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+        <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
+        <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+        <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at <span style="color:green">0900</span>, <span style="color:red">1300</span>, and <span style="color:red">2100</span>.</li>
+      </ul>
+    </details>
   </section>
 
   <section id="medStock">
     <h2>Medication Stock</h2>
     <button id="return-meds" type="button">Return Meds</button>
-    <p>Click on the medication to pull from stock.</p>
+    <p>Click on the medication to pull from stock. Pulled meds will be taken to the patient's room.</p>
     <button id="buttonLis" type="button">Lisinopril 5 mg tablet</button>
     <button id="buttonAsp" type="button">Aspirin 81 mg tablet</button>
     <button id="buttonEsci" type="button">Escitalopram 10 mg tablet</button>
