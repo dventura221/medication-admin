@@ -2,14 +2,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.roomImage {
-  max-height: 50px;
-  max-width: 100px;
-  cursor: pointer;
-}
-
 #patient-room {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
@@ -18,4 +12,15 @@
 }
 
 #nurseStationPic {
+  display: grid;
+}
+
+.roomImage {
+  max-height: 50px;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+#imgRmBG {
+  max-width: 750px;
 }

@@ -77,3 +77,5 @@
 #### JavaScript Tutorial (https://www.javascripttutorial.net/web-apis/javascript-sessionstorage/)
 
 #### Officeworks (https://officeworks.net/campaigns/commend-nurses-station)
+
+#### CPR.org (https://www.cpr.org/2020/10/16/new-hospital-data-shows-ventilator-use-fell-over-time-and-coronavirus-patient-stays-grew-shorter/)
