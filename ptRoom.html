@@ -12,52 +12,63 @@
   <h1>The Patient Room</h1>
   <button id="backToPage1" onclick="window.location.href='start.html'">Back to Start</button>
   <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
-  <button id="toFinalRoom" onclick="window.location.href='index3.html'">Finish</button>
-  <section id="Held-Meds">
-    <h3>Held Meds</h3>
-    <button id="return-meds" type="button">Return Meds</button>
-    <div id="All-Held-Meds">
+  <button id="toFinalRoom" onclick="window.location.href='index3.html'">Finish</button><br>
 
-    </div>
   <section id="patient-room">
+
     <div id="thePatient">
-      <h2>Patient X</h2>
-      <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" >
-      <form action="index3.html" method="get">
-        <fieldset>
-          <legend>Choose the most correct way to interact during medication administration:</legend>
-          <input type="radio" id="ignore" name="ptInt">
-          <label for="ignore">Ignore the patient</label><br/>
-          <input type="radio" id="sayHi" name="ptInt">
-          <label for="sayHi">Say hello and tell them you have their meds</label><br/>
-          <input type="radio" id="doubID" name="ptInt">
-          <label for="doubID">Say hello, tell them you have their meds, and ask for their full name and date of birth</label><br/>
-          <input type="radio" id="wrongPt" name="ptInt">
-          <label for="wrongPt">Say hello and give the meds to a family member to give to the patient</label><br/>
-          <input type="submit" value="Confirm">
-        </fieldset>
-      </form>
+      <h2>Patient </h2>
+      <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" ><br>
+      
+      <button id="ignorePt" class="ptInteract" type="button">Ignore the patient</button><br>
+      <button id="askName" class="ptInteract" type="button">Say hello and ask for their full name</button><br>
+      <button id="askNameDOB" class="ptInteract" type="button">Say hello and ask for their full name and date of birth</button><br>
+      <button id="resetPtInteract" type="button">Change your mind</button>
     </div>
+
     <div id="theMeds">
-      <h2>Meds</h2>
-      <img class="roomImage" src="http://clipart-library.com/newhp/Ten-capsule-pills-free-clip-art.png" alt="Meds">
+      <h2>Held Meds</h2>
+      <img class="roomImage" src="http://clipart-library.com/newhp/Ten-capsule-pills-free-clip-art.png" alt="Meds"><br>
+      <button id="return-meds" type="button">Return Meds</button><br>
+      <div id="All-Held-Meds"></div></div>
     </div>
+
     <div id="medOrders">
-      <h2>Chart - Med Orders</h2>
+      <h2>Medication Orders</h2>
       <img class="roomImage" src="http://clipart-library.com/data_images/184306.png" alt="Doc Orders">
+      <details>
+        <summary>Expand to check med orders</summary>
+        <ul>
+          <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at 0900. <span style="font-weight: bold">HOLD</span> if systolic BP < 100, or diastolic BP < 50, then notify provider. Indication: Hypertension</li>
+          <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at 0900. Indication: Depression</li>
+          <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at 2100. Indication: Insomnia</li>
+          <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at 0900. Indication: GERD</li>
+          <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at 0900, 1300, and 2100. 
+          Indication: Chronic Pain</li>
+        </ul>
+      </details>
+      
     </div>
     <div id="problemList">
       <h2>Chart - Problem List</h2>
       <img class="roomImage" src="https://www.pngitem.com/pimgs/m/144-1447764_diagnosis-clipart-hd-png-download.png" alt="Problem List">
     </div>
+
     <div id="theMAR">
       <h2>M.A.R.</h2>
       <img class="roomImage" src="http://clipart-library.com/image_gallery/89990.jpg" alt="MAR">
     </div>
+
     <div id="theVS">
-      <h2>Recent Vital Signs</h2>
+      <h2>Vital Signs</h2>
       <img class="roomImage" src="https://d16qt3wv6xm098.cloudfront.net/s0dcjWJ-QYWSX8ZHxWR8Q3xiToyEzsa6/_.jpg" alt-="Vital Signs">
+      <details>
+        <summary>Expand to see most recent blood pressure</summary> 
+        <p>Systolic Blood Pressure 98 at 0855 today</p>
+        <p>Diastolic Blood Pressure 65 at 0855 today</p>
+      </details>
     </div>
+
   </section>
 
 

@@ -6,15 +6,26 @@ const buttonEsci = document.getElementById('buttonEsci')
 const buttonTraz = document.getElementById('buttonTraz')
 const buttonOmep = document.getElementById('buttonOmep')
 const buttonGaba = document.getElementById('buttonGaba')
+const buttonIgnorePt = document.getElementById('ignorePt')
+const buttonAskName = document.getElementById('askName')
+const buttonAskNameDOB = document.getElementById('askNameDOB')
+const buttonResetPtInteract = document.getElementById('resetPtInteract')
 const ptRoomCheck = document.getElementById('PagePatientRoom')
 const buttonMedReturn = document.getElementById('return-meds')
 const heldMeds = document.getElementById('All-Held-Meds')
 const ptRoomButtons = document.getElementsByClassName('ptRoom-button')
+const buttonsPtInteract = document.getElementsByClassName('ptInteract')
 const pulledMedsList = document.getElementById('pulled-meds-list')
 let storedMeds = Object.keys(sessionStorage)
 let storedMedsName = Object.values(sessionStorage)
 
 //Global Functions
+
+const resetButtonsPtInteract = () => {
+  for (let i = 0; i < buttonsPtInteract.length; i++) {
+    buttonsPtInteract[i].disabled = true
+  }
+}
 
 let medCarryOver = () => {
   for (let key of storedMeds) {
@@ -61,40 +72,71 @@ buttonMedReturn.addEventListener('click', () => {
   console.log(sessionStorage)
 })
 
-buttonLis.addEventListener('click', () => {
-  sessionStorage.setItem('Lis', ' Lisinopril 5 mg tablet')
-  console.log(sessionStorage)
-  //clearMedRmPulled()
-  medsPulledList()
+if (ptRoomCheck === null) {
+  buttonLis.addEventListener('click', () => {
+    sessionStorage.setItem('Lis', ' Lisinopril 5 mg tablet')
+    console.log(sessionStorage)
+    medsPulledList()
+  })
+}
+
+if (ptRoomCheck === null) {
+  buttonAsp.addEventListener('click', () => {
+    sessionStorage.setItem('Asp', ' Aspirin 81 mg tablet')
+    console.log(sessionStorage)
+    medsPulledList()
+  })
+}
+
+if (ptRoomCheck === null) {
+  buttonEsci.addEventListener('click', () => {
+    sessionStorage.setItem('Esci', ' Escitalopram 10 mg tablet')
+    medsPulledList()
+  })
+}
+
+if (ptRoomCheck === null) {
+  buttonTraz.addEventListener('click', () => {
+    sessionStorage.setItem('Traz', ' Trazodone 50 mg tablet')
+    medsPulledList()
+  })
+}
+
+if (ptRoomCheck === null) {
+  buttonOmep.addEventListener('click', () => {
+    sessionStorage.setItem('Omep', ' Omeprazole 20 mg capsule')
+    medsPulledList()
+  })
+}
+
+if (ptRoomCheck === null) {
+  buttonGaba.addEventListener('click', () => {
+    sessionStorage.setItem('Gaba', ' Gabapentin 300 mg capsule')
+    medsPulledList()
+  })
+}
+
+buttonIgnorePt.addEventListener('click', () => {
+  localStorage.setItem('IgnorePt', 'IgnorePt')
+  resetButtonsPtInteract()
+  console.log(localStorage)
 })
 
-buttonAsp.addEventListener('click', () => {
-  sessionStorage.setItem('Asp', ' Aspirin 81 mg tablet')
-  console.log(sessionStorage)
-  //clearMedRmPulled()
-  medsPulledList()
+buttonAskName.addEventListener('click', () => {
+  localStorage.setItem('AskName', 'AskName')
+  resetButtonsPtInteract()
+  console.log(localStorage)
 })
 
-buttonEsci.addEventListener('click', () => {
-  sessionStorage.setItem('Esci', ' Escitalopram 10 mg tablet')
-  //console.log(sessionStorage)
-  medsPulledList()
+buttonAskNameDOB.addEventListener('click', () => {
+  localStorage.setItem('AskNameDOB', 'AskNameDOB')
+  resetButtonsPtInteract()
+  console.log(localStorage)
 })
 
-buttonTraz.addEventListener('click', () => {
-  sessionStorage.setItem('Traz', ' Trazodone 50 mg tablet')
-  //console.log(sessionStorage)
-  medsPulledList()
-})
-
-buttonOmep.addEventListener('click', () => {
-  sessionStorage.setItem('Omep', ' Omeprazole 20 mg capsule')
-  //console.log(sessionStorage)
-  medsPulledList()
-})
-
-buttonGaba.addEventListener('click', () => {
-  sessionStorage.setItem('Gaba', ' Gabapentin 300 mg capsule')
-  //console.log(sessionStorage)
-  medsPulledList()
+buttonResetPtInteract.addEventListener('click', () => {
+  localStorage.clear()
+  for (let i = 0; i < buttonsPtInteract.length; i++) {
+    buttonsPtInteract[i].disabled = false
+  }
 })
