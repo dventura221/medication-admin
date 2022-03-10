@@ -1,12 +1,16 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .roomImage {
   max-height: 50px;
-  max-width: auto;
+  max-width: 100px;
   cursor: pointer;
 }
 
 #patient-room {
   display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 
   /* display: flex;

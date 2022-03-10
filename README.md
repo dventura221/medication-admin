@@ -66,7 +66,7 @@
 
 ### **_Credits_**
 
-#### Nursing Rights of Medicaion Administration [NCBI] (https://www.ncbi.nlm.nih.gov/books/NBK560654/)
+#### Five Rights of Medication Administration [NCBI] (https://www.ncbi.nlm.nih.gov/books/NBK560654/) (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2957754/)
 
 #### Images: [Imgur](imgur.com)
 
