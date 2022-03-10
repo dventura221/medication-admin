@@ -10,6 +10,7 @@ const buttonIgnorePt = document.getElementById('ignorePt')
 const buttonAskName = document.getElementById('askName')
 const buttonAskNameDOB = document.getElementById('askNameDOB')
 const buttonResetPtInteract = document.getElementById('resetPtInteract')
+const medRoomCheck = document.getElementById('pageMedRoom')
 const ptRoomCheck = document.getElementById('PagePatientRoom')
 const buttonMedReturn = document.getElementById('return-meds')
 const heldMeds = document.getElementById('All-Held-Meds')
@@ -19,8 +20,21 @@ const pulledMedsList = document.getElementById('pulled-meds-list')
 const buttonFinalCheck = document.getElementById('finalConfirm')
 let storedMeds = Object.keys(sessionStorage)
 let storedMedsName = Object.values(sessionStorage)
+let popup = document.getElementById('myPopup')
 
 //Global Functions
+
+const rnStation = () => {
+  popup.classList.toggle('show')
+}
+
+// const showCoords = (event) => {
+//   let x = event.clientX
+//   let y = event.clientY
+//   let coords = `X: ${x}, Y: ${y}`
+//   document.getElementById('imgRNStationCoords').innerHTML = coords
+//   //Inspo from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_mouse_clientxy
+// }
 
 const winOrLose = () => {
   if (
@@ -75,16 +89,18 @@ let clearMedRmPulled = () => {
 }
 
 //Event Listeners
-buttonMedReturn.addEventListener('click', () => {
-  sessionStorage.clear()
-  if (ptRoomCheck !== null) {
-    while (heldMeds.firstChild) {
-      heldMeds.removeChild(heldMeds.firstChild)
+if (medRoomCheck !== null) {
+  buttonMedReturn.addEventListener('click', () => {
+    sessionStorage.clear()
+    if (ptRoomCheck !== null) {
+      while (heldMeds.firstChild) {
+        heldMeds.removeChild(heldMeds.firstChild)
+      }
     }
-  }
-  pulledMedsList.innerText = ' '
-  console.log(sessionStorage)
-})
+    pulledMedsList.innerText = ' '
+    console.log(sessionStorage)
+  })
+}
 
 if (ptRoomCheck === null) {
   buttonLis.addEventListener('click', () => {
