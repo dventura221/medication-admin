@@ -16,10 +16,24 @@ const heldMeds = document.getElementById('All-Held-Meds')
 const ptRoomButtons = document.getElementsByClassName('ptRoom-button')
 const buttonsPtInteract = document.getElementsByClassName('ptInteract')
 const pulledMedsList = document.getElementById('pulled-meds-list')
+const buttonFinalCheck = document.getElementById('finalConfirm')
 let storedMeds = Object.keys(sessionStorage)
 let storedMedsName = Object.values(sessionStorage)
 
 //Global Functions
+
+const winOrLose = () => {
+  if (
+    sessionStorage.getItem('Asp') !== null ||
+    sessionStorage.getItem('Traz') !== null ||
+    sessionStorage.getItem('Lis') !== null ||
+    localStorage.getItem('AskNameDOB') === null
+  ) {
+    alert('You lose')
+  } else {
+    alert('You win')
+  }
+}
 
 const resetButtonsPtInteract = () => {
   for (let i = 0; i < buttonsPtInteract.length; i++) {
@@ -139,4 +153,8 @@ buttonResetPtInteract.addEventListener('click', () => {
   for (let i = 0; i < buttonsPtInteract.length; i++) {
     buttonsPtInteract[i].disabled = false
   }
+})
+
+buttonFinalCheck.addEventListener('click', () => {
+  winOrLose()
 })
