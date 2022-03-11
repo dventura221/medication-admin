@@ -1,6 +1,6 @@
 # Medication Administration Sim
 
-## [Med Pass on Surge](med-admin.surge.sh)
+## Med Pass on Surge (med-admin.surge.sh)
 
 ## Date Approved: 3/7/22
 
