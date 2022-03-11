@@ -13,7 +13,8 @@
 <body id="PagePatientRoom">
   <div>
     <Header>
-      <h1>The Patient Room for Pat Smith</h1>
+      <h1>Patient Room</h1>
+      <h3>Here you can interact with patient Pat Smith and do a final check before you administer medications.</h3>
       <button id="backToPage1" onclick="window.location.href='index.html'">Back to Start</button>
       <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
       
@@ -28,10 +29,10 @@
   <div class="ptRmDivs" id="medOrders">
     <h4 class="ptRmH4">Medication Orders</h4>
     <img class="roomImage" src="http://clipart-library.com/data_images/184306.png" alt="Doc Orders">
-    <details class="ptRm">
-      <summary>Expand to check med orders</summary>
-      <ul>
-        <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100</li>
+    <details class="expMedOrdersPtRm">
+      <summary>Expand to check med orders for Pat Smith, date of birth 3/10/1922</summary>
+      <ul style="list-style-type:none;">
+        <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100.</li>
         <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
         <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
         <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
@@ -41,21 +42,21 @@
   </div>
 
   <div class="ptRmDivs" id="theVS">
-      <h4 class="ptRm">Systolic Blood Pressure: 98 at 0855 today</h4>
+      <h4 class="ptRm">Systolic Blood Pressure: 95 at 0855 today</h4>
   </div>
 
   <div class="ptRmDivs" id="theMeds">
       <h4 class="ptRmH4">Held Meds</h4>
-      <p class="ptRm">If you want different medications, Return All Meds, and repick from the Medication Room</p>
-      <img class="roomImage" src="http://clipart-library.com/newhp/Ten-capsule-pills-free-clip-art.png" alt="Meds"><br>
+      <p class="ptRm">These will be given to the patient when you hit the Finish button. You can rechoose medications by hitting Return All Meds. Then repick from the Medication Room</p>
+      <!-- <img class="roomImage" src="http://clipart-library.com/newhp/Ten-capsule-pills-free-clip-art.png" alt="Meds"><br> -->
       <button id="return-meds" type="button">Return All Meds</button><br>
       <div id="All-Held-Meds"></div>
   </div>
 
   <div class="ptRmDivs" id="thePatient">
-      <h4 class="ptRmH4">Patient</h4>
-      <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" ><br>
-      <details class="ptRm">
+      <h4 class="ptRmH4">Patient Pat Smith</h4>
+      <!-- <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" ><br> -->
+      <details class="expMedOrdersPtRm">
         <summary>Expand to interact with the patient</summary>
         <button id="ignorePt" class="ptInteract" type="button">1. Ignore the patient</button><br>
         <button id="askName" class="ptInteract" type="button">2. Say hello and ask for their full name</button><br>
@@ -66,7 +67,7 @@
 
   <div>
     <h4 class="ptRmH4">Administer the Medications!</h4>
-    <p class="ptRm">Hit the finish button to evaluate if you have safely passed medications.</p>
+    <p class="ptRm">Hit the Finish Button below to see if you safely passed medications.</p>
     <button id="finalConfirm" >Finish</button><br>
   </div>
 

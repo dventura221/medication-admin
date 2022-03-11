@@ -9,40 +9,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>Med Pass</title>
 </head>
+
 <body id="pageMedRoom">
-  <h1>Med Room</h1>
-  <button id="backToPage1" onclick="window.location.href='index.html'">Back to Start</button>
-  <button id="advanceToPtRoom" onclick="window.location.href='ptRoom.html'">Go to Patient Room</button>
-  <section id="medOrders">
-    <h2>Medication Orders for Patient Pat Smith</h2>
-    <details>
-      <summary>Expand to check med orders</summary>
-      <ul>
-        <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100</li>
-        <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
-        <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
-        <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
-        <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at <span style="color:green">0900</span>, <span style="color:red">1300</span>, and <span style="color:red">2100</span>.</li>
-      </ul>
-    </details>
-  </section>
 
-  <section id="medStock">
-    <h2>Medication Stock</h2>
-    <button id="return-meds" type="button">Return Meds</button>
-    <p>Click on the medication to pull from stock. Pulled meds will be taken to the patient's room.</p>
-    <button id="buttonLis" type="button">Lisinopril 5 mg tablet</button>
-    <button id="buttonAsp" type="button">Aspirin 81 mg tablet</button>
-    <button id="buttonEsci" type="button">Escitalopram 10 mg tablet</button>
-    <button id="buttonTraz" type="button">Trazodone 50 mg tablet</button>
-    <button id="buttonOmep" type="button">Omeprazole 20 mg capsule</button>
-    <button id="buttonGaba" type="button">Gabapentin 300 mg capsule</button>
-  </section>
+  <div class="medRmDiv">
+    <h1 class="medRmText">Med Room</h1>
+    <h3 class="medRmText">This is the Med Room. You can get or 'pull' medications here to take to the patient.</h3>
+    <button id="backToPage1" onclick="window.location.href='index.html'">Back to Start</button>
+    <button id="advanceToPtRoom" onclick="window.location.href='ptRoom.html'">Go to Patient Room</button>
+  </div>
 
-  <section id="pulled-meds">
-    <h2>Pulled Meds</h2>
-    <p id="pulled-meds-list"></p>
-  </section>
+  <div class="medRmDiv">
+    <section id="medOrders">
+      <h2 class="medRmText">Medication Orders for Patient Pat Smith, date of birth 3/10/1922</h2>
+      <details>
+        <summary class="medRmText">Expand to check med orders</summary>
+          <ul class="medRmText" style="list-style-type:none;">
+            <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100.</li>
+            <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+            <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
+            <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+            <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at <span style="color:green">0900</span>, <span style="color:red">1300</span>, and <span style="color:red">2100</span>.</li>
+          </ul>
+      </details>
+    </section>
+  </div>
+
+  <div class="medRmDiv">
+    <section id="medStock">
+      <h2 class="medRmText">Medication Stock</h2>
+      <button id="return-meds" type="button">Return All Meds back to Stock</button>
+      <p class="medRmText">Click on the medication to pull from stock.</p>
+      <button id="buttonLis" type="button">Lisinopril 5 mg tablet</button>
+      <button id="buttonAsp" type="button">Aspirin 81 mg tablet</button>
+      <button id="buttonEsci" type="button">Escitalopram 10 mg tablet</button>
+      <button id="buttonTraz" type="button">Trazodone 50 mg tablet</button>
+      <button id="buttonOmep" type="button">Omeprazole 20 mg capsule</button>
+      <button id="buttonGaba" type="button">Gabapentin 300 mg capsule</button>
+    </section>
+  </div> 
+  
+  <div class="medRmDiv">
+    <section id="pulled-meds">
+      <h2 class="medRmText">Pulled Meds: will be taken to the patient's room.</h2>
+      <p id="pulled-meds-list"></p>
+    </section>
+  </div>  
 
 </body>
 </html>

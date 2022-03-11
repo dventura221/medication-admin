@@ -21,9 +21,9 @@
 }
 
 #PagePatientRoom > div {
-  height: 500px;
+  height: 550px;
   background-color: rgba(0, 0, 0, 0.5);
-  background: url(https://wp-cpr.s3.amazonaws.com/uploads/2020/03/200310-ST-JOSEPH-HOSPITAL-CORONAVIRUS-HEALTH-CITY-PARK-WEST-KEVINJBEATY-03.jpg?resize=1032,688);
+  background: url(https://i.imgur.com/3m7QAcV.jpg);
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.8;
@@ -49,14 +49,148 @@ header,
 .ptRmH4,
 .ptRm {
   text-align: center;
-  padding: 50px 75px 50px 75px;
+  padding: 20px 75px 20px 75px;
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 25px;
+}
+
+.ptRmDivs {
+  padding: 10px;
 }
 
 .ptRmH4 {
   font-size: 28px;
 }
 
-#ptRoomImg {
+.expMedOrdersPtRm {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+}
+
+#pageIntroRoom {
+  background-color: rgb(79, 79, 79);
+  color: black;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+#pageIntroRoom > div {
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url(https://i.imgur.com/iEfAXAw.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.25s ease-in;
+}
+
+#pageIntroRoom > div:hover {
+  opacity: 1;
+  transform: scale(0.99);
+}
+
+#pageIntroRoom > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+#pageIntroRoom > div:nth-of-type(2) {
+  grid-column: 3 / 5;
+}
+
+#pageIntroRoom > div:nth-of-type(4) {
+  grid-column: 2 / 4;
+}
+
+#pageIntroRoom > div:nth-of-type(5) {
+  grid-column: 4 / 5;
+}
+
+.introDiv {
+  padding: 50px;
+  background-color: rgba(rgb(206, 163, 83), 0.5);
+}
+
+.introText {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#titleIntroMajor {
+  font-size: 150px;
+}
+
+#pageMedRoom {
+  background-color: rgb(14, 14, 58);
+  color: black;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+#pageMedRoom > div {
+  height: 550px;
+  background-color: white;
+  background: url(https://i.imgur.com/qhsWyeR.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.25s ease-in;
+}
+
+#pageMedRoom > div:hover {
+  opacity: 1;
+  transform: scale(0.99);
+}
+
+#pageMedRoom > div:nth-of-type(1) {
+  grid-column: 1 / 5;
+}
+
+#pageMedRoom > div:nth-of-type(2) {
+  grid-column: 1 / 3;
+}
+
+.medRmDiv {
+  padding: 15px;
+}
+
+.medRmText,
+#pulled-meds-list {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  background-color: white;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 25px;
+  transition-duration: 0.2ms;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
+}
+
+details:hover {
+  background-color: wheat;
+  color: black;
 }

@@ -1,5 +1,4 @@
 //Global Variables
-//let data = sessionStorage.getItem('Lis')
 const buttonLis = document.getElementById('buttonLis')
 const buttonAsp = document.getElementById('buttonAsp')
 const buttonEsci = document.getElementById('buttonEsci')
@@ -28,14 +27,6 @@ const rnStation = () => {
   popup.classList.toggle('show')
 }
 
-// const showCoords = (event) => {
-//   let x = event.clientX
-//   let y = event.clientY
-//   let coords = `X: ${x}, Y: ${y}`
-//   document.getElementById('imgRNStationCoords').innerHTML = coords
-//   //Inspo from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_event_mouse_clientxy
-// }
-
 const winOrLose = () => {
   if (
     sessionStorage.getItem('Asp') !== null ||
@@ -57,8 +48,6 @@ const resetButtonsPtInteract = () => {
 
 let medCarryOver = () => {
   for (let key of storedMeds) {
-    //console.log(`${key}: ${sessionStorage.getItem(key)}`) -- string of 'key: value'
-    //console.log(sessionStorage.getItem(key)) -- string of value
     const newButton = document.createElement('button')
     newButton.innerText = sessionStorage.getItem(key)
     newButton.classList.add('ptRoom-med-button')
@@ -67,11 +56,6 @@ let medCarryOver = () => {
 }
 
 let medsPulledList = () => {
-  // for (let key of storedMeds) {
-  //   const newButton = document.createElement('li')
-  //   newButton.innerText = sessionStorage.getItem(key)
-  //   pulledMedsList.appendChild(newButton)
-  // }
   pulledMedsList.innerText = Object.values(sessionStorage)
 }
 
