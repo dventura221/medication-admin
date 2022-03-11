@@ -30,7 +30,7 @@
 
   <div class="scenario introDiv"">
     <h2 class="scenario introText"" id="scenarioTitle">Scenario</h2>
-    <p class="scenario introText"" id="scenarioDescrip">You are a nurse in the hospital. It is 09:00 AM and time for 09:00 AM med pass! You will be giving patient Pat Smith their meds.</p>
+    <p class="scenario introText"" id="scenarioDescrip">You are a nurse in a hospital. It is 09:00 AM and time for morning med pass! You will be giving meds to patient Pat Smith. The Medication Room is where you can pick up meds. The Patient Room is where to find the patient. Good luck!</p>
   </div>
 
   <div class="introDiv">
@@ -39,7 +39,7 @@
       <details>
         <summary class="introText">Expand to check med orders</summary>
         <ul style="list-style-type:none;" class="introText">
-          <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100.</li>
+          <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span id="lisHOLD">HOLD and do not give</span> if systolic blood pressure < 100.</li>
           <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
           <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
           <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
@@ -49,8 +49,8 @@
   </div>
 
   <div class="advancePage introDiv"">
-    <button id="advanceToPtRoom" onclick="window.location.href='ptRoom.html'">Go to Patient Room</button>
     <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
+    <button id="advanceToPtRoom" onclick="window.location.href='ptRoom.html'">Go to Patient Room</button>
   </div>
 
 </body>
