@@ -10,7 +10,11 @@
 
 ### **_Description_**
 
-#### A browser based, nursing simulation meant to evaluate the common, but important task of administing oral medications to a patient, in an inpatient setting. Based on the 5 Nursing Rights of Medication Administation, [NCBI], this is meant to be a training tool to help prevent medication errors. Intended audience can include nurses, nursing students, educators, and healthcare administrators.
+#### A browser based, nursing simulation to evaluate the common, but important task of administering oral medications to a patient, in an inpatient setting. Based on the 5 Nursing Rights of Medication Administation, [NCBI], this is meant to be a training tool to help prevent medication errors. Intended audience can include nurses, nursing students, educators, and healthcare administrators.
+
+#### Built over 5 days as a school project during 3/7/22 - 3/11/22.
+
+#### [Trello Med Admin] (https://trello.com/b/h68Pf8GX/med-admin)
 
 ![Pills](https://www.nurse.com/blog/wp-content/uploads/2017/02/Nurse-patient-pills-FB.jpeg)
 
@@ -30,19 +34,17 @@
 
 ### **_How to Get Started_**
 
-#### [Trello Med Admin] (https://trello.com/b/h68Pf8GX/med-admin)
-
 #### - Expect at least 3 pages of HTML, Intro/Instruction, Patient Room, and Evaluation/Results.
 
 #### - CSS involved would involve styling for all pages, with most complex grid/flex on the Patient Room page.
 
-#### - Mutiple elements to click/interact with, including a Patient, Chart/Computer, Medication, and MAR (Medication Admin Record). To reflect 5 Rights of Med Admin.
+#### - Mutiple elements to click/interact with, including a Patient, Chart/Computer, Medication, and ~~MAR (Medication Admin Record)~~. To reflect 5 Rights of Med Admin.
 
 ![MedErrors](https://www.myamericannurse.com/wp-content/uploads/2010/03/prevent-medication-errors-257x300.jpg)
 
-#### - Gameplay centered around making choices when interacting with elements on the page. E.g. asking the patient for double identifiers; verying the correct medication, dose, route, time; and assessing for the right indication and result of the medication. Points/Pass allotted to the correct choices. Deductions for wrong choices. Same to assume wrong choices lead to automatic failure, as this simulation is meant to train on nursing standards of care.
+#### - Gameplay centered around making choices when interacting with elements on the page. E.g. asking the patient for double identifiers; verying the correct medication, dose, route, time; and assessing for the right indication and result of the medication. ~~Points~~/Pass allotted to the correct choices. ~~Deductions for wrong choices.~~ Safe to assume wrong choices lead to automatic failure, as this simulation is meant to train on nursing standards of care.
 
-#### - Once simulation complete in Patient Room, change to different page for an evaluation of the game. Constructive critical review of game with, pointing out areas of improvement. Incorporate retry of simulation.
+#### - ~~Once simulation complete in Patient Room, change to different page for an evaluation of the game. Constructive critical review of game with, pointing out areas of improvement.~~ Incorporate retry of simulation.
 
 ---
 
@@ -64,7 +66,7 @@
 
 #### - [x] Update 4 - 3/9/22 - MVP, ~~Reset the game without having to do a hard reset or closing browser~~ - Done.
 
-#### - [ ] Update 5 - bonus features pending, return just one medication with button click.
+#### - [ ] Update 5 - bonus features pending, return just one medication with button click, replace alert with modal window.
 
 ---
 
