@@ -34,9 +34,9 @@ const winOrLose = () => {
     sessionStorage.getItem('Lis') !== null ||
     localStorage.getItem('AskNameDOB') === null
   ) {
-    alert('You lose')
+    alert('You lose, you can go back and try again.')
   } else {
-    alert('You win')
+    alert('You win.')
   }
 }
 

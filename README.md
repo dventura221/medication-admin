@@ -48,19 +48,21 @@
 
 ### **_Screenshots_**
 
-#### Pending
+#### Intro Page
+
+![Intro Page](https://i.imgur.com/6abnPQ2.png)
 
 ---
 
 ### **_Future Updates_**
 
-#### - [ ] Future Update 1 - Decide on creating own art, or using outside source.
+#### - [x] Update 1 - ~~Decide on creating own art, or~~ using outside source.
 
-#### - [ ] Future Update 2 - Building basic framework of HTML, CSS Grid.
+#### - [x] Update 2 - Building basic framework of HTML, CSS Grid.
 
-#### - [ ] Future Update 3 - Build basic game logic for JS for win/lose conditions, event listeners for element intecaction.
+#### - [x] Update 3 - Build basic game logic for JS for win/lose conditions, event listeners for element intecaction.
 
-#### - [ ] Expected Updates Pending.
+#### - [x] Update 4 - MVP, bonus features pending, return just one medication with button click. Reset the game without having to do a hard reset or closing browser.
 
 ---
 
