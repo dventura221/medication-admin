@@ -81,6 +81,7 @@ let clearMedRmPulled = () => {
 }
 
 //Event Listeners
+
 buttonMedReturn.addEventListener('click', () => {
   sessionStorage.clear()
   if (ptRoomCheck !== null) {

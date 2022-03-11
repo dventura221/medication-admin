@@ -1,6 +1,6 @@
 # Medication Administration Sim
 
-## Date: 3/7/22
+## Date Approved: 3/7/22
 
 ### By: Dan Ventura
 
@@ -62,7 +62,9 @@
 
 #### - [x] Update 3 - Build basic game logic for JS for win/lose conditions, event listeners for element intecaction.
 
-#### - [x] Update 4 - MVP, bonus features pending, return just one medication with button click. Reset the game without having to do a hard reset or closing browser.
+#### - [x] Update 4 - 3/9/22 - MVP, ~~Reset the game without having to do a hard reset or closing browser~~ - Done.
+
+#### - [ ] Update 5 - bonus features pending, return just one medication with button click.
 
 ---
 
