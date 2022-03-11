@@ -19,12 +19,21 @@ const pulledMedsList = document.getElementById('pulled-meds-list')
 const buttonFinalCheck = document.getElementById('finalConfirm')
 let storedMeds = Object.keys(sessionStorage)
 let storedMedsName = Object.values(sessionStorage)
-let popup = document.getElementById('myPopup')
 
 //Global Functions
 
-const rnStation = () => {
-  popup.classList.toggle('show')
+const replay = () => {
+  if (confirm('Reset and try again?') === true) {
+    localStorage.clear()
+    for (let i = 0; i < buttonsPtInteract.length; i++) {
+      buttonsPtInteract[i].disabled = false
+    }
+    sessionStorage.clear()
+    while (heldMeds.firstChild) {
+      heldMeds.removeChild(heldMeds.firstChild)
+    }
+    pulledMedsList.innerText = ' '
+  }
 }
 
 const winOrLose = () => {
@@ -35,8 +44,10 @@ const winOrLose = () => {
     localStorage.getItem('AskNameDOB') === null
   ) {
     alert('You lose, you can go back and try again.')
+    replay()
   } else {
     alert('You win.')
+    replay()
   }
 }
 
@@ -60,10 +71,7 @@ let medsPulledList = () => {
 }
 
 if (ptRoomCheck !== null) {
-  console.log('Page IS Pt Room')
   medCarryOver()
-} else {
-  console.log('Page is NOT Pt Room')
 }
 
 let clearMedRmPulled = () => {
@@ -81,13 +89,11 @@ buttonMedReturn.addEventListener('click', () => {
     }
   }
   pulledMedsList.innerText = ' '
-  console.log(sessionStorage)
 })
 
 if (ptRoomCheck === null) {
   buttonLis.addEventListener('click', () => {
     sessionStorage.setItem('Lis', ' Lisinopril 5 mg tablet')
-    console.log(sessionStorage)
     medsPulledList()
   })
 }
@@ -95,7 +101,6 @@ if (ptRoomCheck === null) {
 if (ptRoomCheck === null) {
   buttonAsp.addEventListener('click', () => {
     sessionStorage.setItem('Asp', ' Aspirin 81 mg tablet')
-    console.log(sessionStorage)
     medsPulledList()
   })
 }
@@ -131,19 +136,16 @@ if (ptRoomCheck === null) {
 buttonIgnorePt.addEventListener('click', () => {
   localStorage.setItem('IgnorePt', 'IgnorePt')
   resetButtonsPtInteract()
-  console.log(localStorage)
 })
 
 buttonAskName.addEventListener('click', () => {
   localStorage.setItem('AskName', 'AskName')
   resetButtonsPtInteract()
-  console.log(localStorage)
 })
 
 buttonAskNameDOB.addEventListener('click', () => {
   localStorage.setItem('AskNameDOB', 'AskNameDOB')
   resetButtonsPtInteract()
-  console.log(localStorage)
 })
 
 buttonResetPtInteract.addEventListener('click', () => {
