@@ -5,67 +5,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <script defer src="taco.js"></script>
   <title>Med Pass</title>
 </head>
+
 <body id="PagePatientRoom">
-  <h1>The Patient Room</h1>
-  <button id="backToPage1" onclick="window.location.href='index.html'">Back to Start</button>
-  <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
-  <button id="finalConfirm" >Finish</button><br>
-    <!-- onclick="window.location.href='index3.html'" -->
-  <section id="patient-room">
-
-    <div id="ptRmBackground">
-      <img id="imgRmBG" src="https://wp-cpr.s3.amazonaws.com/uploads/2020/03/200310-ST-JOSEPH-HOSPITAL-CORONAVIRUS-HEALTH-CITY-PARK-WEST-KEVINJBEATY-03.jpg?resize=1032,688">
-    </div>
-
-    <div id="thePatient">
-      <h4>Patient</h4>
-      <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" ><br>
+  <div>
+    <Header>
+      <h1>The Patient Room for Pat Smith</h1>
+      <button id="backToPage1" onclick="window.location.href='index.html'">Back to Start</button>
+      <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
       
-      <button id="ignorePt" class="ptInteract" type="button">Ignore the patient</button><br>
-      <button id="askName" class="ptInteract" type="button">Say hello and ask for their full name</button><br>
-      <button id="askNameDOB" class="ptInteract" type="button">Say hello and ask for their full name and date of birth</button><br>
-      <button id="resetPtInteract" type="button">Change your mind</button>
-    </div>
+    </Header>
+  </div>
 
-    <div id="theMeds">
-      <h4>Held Meds</h4>
+  <div class="ptRmDivs" id="ptClock">
+    <h4 class="ptRmH4">Clock</h4>
+    <p class="ptRm">0900 AM</p>
+  </div>
+
+  <div class="ptRmDivs" id="medOrders">
+    <h4 class="ptRmH4">Medication Orders</h4>
+    <img class="roomImage" src="http://clipart-library.com/data_images/184306.png" alt="Doc Orders">
+    <details class="ptRm">
+      <summary>Expand to check med orders</summary>
+      <ul>
+        <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100</li>
+        <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+        <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
+        <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+        <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at <span style="color:green">0900</span>, <span style="color:red">1300</span>, and <span style="color:red">2100</span>.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="ptRmDivs" id="theVS">
+      <h4 class="ptRm">Systolic Blood Pressure: 98 at 0855 today</h4>
+  </div>
+
+  <div class="ptRmDivs" id="theMeds">
+      <h4 class="ptRmH4">Held Meds</h4>
+      <p class="ptRm">If you want different medications, Return All Meds, and repick from the Medication Room</p>
       <img class="roomImage" src="http://clipart-library.com/newhp/Ten-capsule-pills-free-clip-art.png" alt="Meds"><br>
-      <button id="return-meds" type="button">Return Meds</button><br>
-      <div id="All-Held-Meds"></div></div>
-    </div>
+      <button id="return-meds" type="button">Return All Meds</button><br>
+      <div id="All-Held-Meds"></div>
+  </div>
 
-    <div id="medOrders">
-      <h4>Medication Orders</h4>
-      <img class="roomImage" src="http://clipart-library.com/data_images/184306.png" alt="Doc Orders">
-      <details>
-        <summary>Expand to check med orders</summary>
-        <ul>
-          <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100</li>
-          <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
-          <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
-          <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
-          <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at <span style="color:green">0900</span>, <span style="color:red">1300</span>, and <span style="color:red">2100</span>.</li>
-        </ul>
-      </details>
-    </div>
+  <div class="ptRmDivs" id="thePatient">
+      <h4 class="ptRmH4">Patient</h4>
+      <img class="roomImage" src="http://clipart-library.com/newhp/Hospital-clip-art-patient-in-hospital-gown-free.jpg" alt="Pt in bed" ><br>
+      <details class="ptRm">
+        <summary>Expand to interact with the patient</summary>
+        <button id="ignorePt" class="ptInteract" type="button">1. Ignore the patient</button><br>
+        <button id="askName" class="ptInteract" type="button">2. Say hello and ask for their full name</button><br>
+        <button id="askNameDOB" class="ptInteract" type="button">3. Say hello and ask for their full name and date of birth</button><br>
+        <button id="resetPtInteract" type="button">RESET your patient interaction</button>
+      </details>  
+  </div>
 
-    <div id="theVS">
-      <h4>Vital Signs</h4>
-      <img class="roomImage" src="https://d16qt3wv6xm098.cloudfront.net/s0dcjWJ-QYWSX8ZHxWR8Q3xiToyEzsa6/_.jpg" alt-="Vital Signs">
-      <details>
-        <summary>Expand to see most recent blood pressure</summary> 
-        <p>Systolic Blood Pressure 98 at 0855 today</p>
-      </details>
-    </div>
-
-  </section>
-
-
-
-  </section>
+  <div>
+    <h4 class="ptRmH4">Administer the Medications!</h4>
+    <p class="ptRm">Hit the finish button to evaluate if you have safely passed medications.</p>
+    <button id="finalConfirm" >Finish</button><br>
+  </div>
 
 </body>
 </html>

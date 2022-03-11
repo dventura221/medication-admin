@@ -1,18 +1,8 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#patient-room {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-
-  /* display: flex;
-  flex-wrap: wrap; */
-}
-
-#nurseStationPic {
-  display: grid;
+  font-family: 'Poppins';
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .roomImage {
@@ -21,6 +11,52 @@
   cursor: pointer;
 }
 
-#imgRmBG {
-  max-width: 750px;
+#PagePatientRoom {
+  background-color: rgb(79, 79, 79);
+  color: black;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+#PagePatientRoom > div {
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: url(https://wp-cpr.s3.amazonaws.com/uploads/2020/03/200310-ST-JOSEPH-HOSPITAL-CORONAVIRUS-HEALTH-CITY-PARK-WEST-KEVINJBEATY-03.jpg?resize=1032,688);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.25s ease-in;
+}
+
+#PagePatientRoom > div:hover {
+  opacity: 1;
+  transform: scale(0.99);
+}
+
+#PagePatientRoom > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+header,
+.ptRmH4,
+.ptRm {
+  text-align: center;
+  padding: 50px 75px 50px 75px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 25px;
+}
+
+.ptRmH4 {
+  font-size: 28px;
+}
+
+#ptRoomImg {
 }

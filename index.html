@@ -5,33 +5,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <script defer src="taco.js"></script>
   <title>Med Pass</title>
 </head>
+
 <body>
-  <h1>Med Pass</h1>
-  <h2>Welcome! This simulation game is designed to test your knowledge of how to safely administer oral medications in the hospital.</h2>
-  <h3>Practice using the "five rights" of medication use:</h3>
-    <ol>
-      <li>Right Patight - verify the patient's identity, e.g. asking them their full name AND date of birth.</li>
-      <li>Right Medication - verify this patient has this medication ordered.</li>
-      <li>Right Time - verify you are giving the medicaiton at the ordered time.</li>
-      <li>Right Dose - verify the strength/dose of the medication.</li>
-      <li>Right Route - verify you are giving the medication the correct way. *Tablets and capsules are given 'by mouth', meaning the patient swallows them.</li>
-    </ol>
+
+  <div>
+    <h1>Med Pass</h1>
+    <h2>Welcome! This simulation game is designed to test your knowledge of how to safely administer medications in the hospital.</h2>
+  </div>
+
+  <div>
+    <h3>Practice using the "five rights" of medication use:</h3>
+      <ol>
+        <li>Right Patight - verify the patient's identity, e.g. asking them their full name AND date of birth.</li>
+        <li>Right Medication - verify this patient has this medication ordered.</li>
+        <li>Right Time - verify you are giving the medicaiton at the ordered time.</li>
+        <li>Right Dose - verify the strength/dose of the medication.</li>
+        <li>Right Route - verify you are giving the medication the correct way. *Tablets and capsules are given 'by mouth', meaning the patient swallows them.</li>
+      </ol>
+  </div>
 
   <div class="scenario">
     <h2 class="scenario" id="scenarioTitle">Scenario</h2>
-    <p class="scenario" id="scenarioDescrip">You are a nurse in the hospital. It is 09:00 AM and time for 09:00 AM med pass! You will be giving patient</p>
+    <p class="scenario" id="scenarioDescrip">You are a nurse in the hospital. It is 09:00 AM and time for 09:00 AM med pass! You will be giving patient Pat Smith their meds.</p>
   </div>
+
   <div class="advancePage">
     <button id="advanceToPtRoom" onclick="window.location.href='ptRoom.html'">Go to Patient Room</button>
     <button id="advanceToMedRoom" onclick="window.location.href='medRoom.html'">Go to Medication Room</button>
   </div>
 
-  <h4>You can take this time to review the medication orders in the computer chart.</h4>
-  <div id="nurseStationPic">
-    <img src="https://hmdp-officeworks.nyc3.cdn.digitaloceanspaces.com/production/primaryImages/_594x520_crop_center-center_line/Commend-Nurses-Station-Robust-Power-and-Data.png" >
+  <div>
+    <h4>You can take this time to review the medication orders. </h4>
+    <h2>Medication Orders for Patient Pat Smith</h2>
+      <details>
+        <summary>Expand to check med orders</summary>
+        <ul>
+          <li>Lisinopril 5 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>. <span style="font-weight: bold">HOLD and do not give</span> if systolic blood pressure < 100</li>
+          <li>Escitalopram 10 mg, 1 tablet by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+          <li>Trazodone 50 mg, 1 tablet by mouth, at bedtime at <span style="color:red">2100</span>.</li>
+          <li>Omeprazole 20 mg, 1 capsule by mouth, once a day in the morning at <span style="color:green">0900</span>.</li>
+          <li>Gabapentin 300 mg, 1 capsule by mouth, three times a day at <span style="color:green">0900</span>, <span style="color:red">1300</span>, and <span style="color:red">2100</span>.</li>
+        </ul>
+      </details>
   </div>
 
 </body>

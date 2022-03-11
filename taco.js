@@ -89,18 +89,16 @@ let clearMedRmPulled = () => {
 }
 
 //Event Listeners
-if (medRoomCheck !== null) {
-  buttonMedReturn.addEventListener('click', () => {
-    sessionStorage.clear()
-    if (ptRoomCheck !== null) {
-      while (heldMeds.firstChild) {
-        heldMeds.removeChild(heldMeds.firstChild)
-      }
+buttonMedReturn.addEventListener('click', () => {
+  sessionStorage.clear()
+  if (ptRoomCheck !== null) {
+    while (heldMeds.firstChild) {
+      heldMeds.removeChild(heldMeds.firstChild)
     }
-    pulledMedsList.innerText = ' '
-    console.log(sessionStorage)
-  })
-}
+  }
+  pulledMedsList.innerText = ' '
+  console.log(sessionStorage)
+})
 
 if (ptRoomCheck === null) {
   buttonLis.addEventListener('click', () => {
